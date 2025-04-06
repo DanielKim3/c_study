@@ -11,7 +11,7 @@ int main()
     srand(time(NULL));
 
     for (int i = 0; i < 6; i++) {
-        int num = rand() % 45 + 1;
+        int num;
         int copy = 1;
 
         while (copy) {
@@ -44,4 +44,3 @@ int main()
 
     return 0;
 }
-
