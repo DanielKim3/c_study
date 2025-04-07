@@ -6,8 +6,14 @@ int main() {
     scanf("%d", &temp);
     int temp_cal = temp / 5;
     
+    
     if (temp_cal >= 6) {
         temp_cal = 6;
+    }
+    
+    if (temp < 0) {
+        printf("한파 경고! 패딩과 장갑, 모자를 착용하세요.\n");
+        return 0;
     }
     
     switch (temp_cal) {
