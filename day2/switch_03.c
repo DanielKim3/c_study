@@ -4,8 +4,7 @@ int main() {
     int temp;
     printf("현재 온도를 입력하세요: ");
     scanf("%d", &temp);
-    int temp_cal = temp / 5;
-    
+    int temp_cal = temp / 5;    
     
     if (temp_cal >= 6) {
         temp_cal = 6;
