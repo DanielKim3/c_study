@@ -24,6 +24,11 @@ void main()
             printf("D등급, 추가 보너스 없음");
             break;
         case 5:
+        case 4:
+        case 3:
+        case 2:
+        case 1:
+        case 0:
             printf("F등급, 추가 보너스 없음, 면담 예정");
             break;
         default:
