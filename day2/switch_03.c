@@ -4,12 +4,14 @@ int main() {
     int temp;
     printf("현재 온도를 입력하세요: ");
     scanf("%d", &temp);
-
-    switch (temp / 5) {
+    int temp_cal = temp / 5;
+    
+    if (temp_cal >= 6) {
+        temp_cal = 6;
+    }
+    
+    switch (temp_cal) {
         case 6:
-        case 7:
-        case 8:
-        case 9:
             printf("너무 더워요! 반팔과 반바지를 입으세요.\n");
             break;
         case 5:
