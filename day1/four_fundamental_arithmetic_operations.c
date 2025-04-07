@@ -11,7 +11,8 @@ void main()
   scanf("%d %d %d", &a, &b, &c);
   if(c == 0){
     printf("0으로 나눌 수 없다.");
+  } else {
+    result = (a + b) * c - (a - b) / c;
+    printf("(%d + %d) * %d - (%d - %d) / %d = %d", a, b, c, a, b, c, result);
   }
-  result = (a + b) * c - (a - b) / c;
-  printf("(%d + %d) * %d - (%d - %d) / %d = %d", a, b, c, a, b, c, result);
 }
