@@ -41,8 +41,8 @@ int main()
        container[j + 1] = key;
     }
   
-  printf("\n");
-  printf("정렬 후: ");
+    printf("\n");
+    printf("정렬 후: ");
     for (int i = 0; i < 6; i++) {
         printf("%d ", container[i]);
     }
