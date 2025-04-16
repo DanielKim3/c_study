@@ -1,22 +1,25 @@
 #include <stdio.h>
 
-// 하나의 공간을 서로 다른 두 변수가 같이 사용하는 것
-// 구조체와 거의 비슷, struct 대신 union을 사용태로 사용할 수 있다.
-void main()
+union program {
+    int intVal;
+    float floatVal;
+    char charVal[50];
+};
+
+void main(void)
 {
-    union program {
-        int intVal;
-        float floatVal;
-        char charVal;
-    };
-    
     union program u;
-    u.intVal = 100;
-    u.floatVal = 99.99;
-    u.charVal = 'A';
-    
-    printf("%d %d\n", u.intVal, &u.intVal);
-    printf("%f %d\n", u.floatVal, &u.floatVal);
-    printf("%c %d\n", u.charVal, &u.charVal);
-    printf("%c %d\n", u.intVal, &u.intVal);
+
+    printf("정수를 입력하세요: ");
+    scanf("%d", &u.intVal);
+    printf("int 값: %d, 주소: %p\n", u.intVal, (void *)&u.intVal);
+    printf("실수를 입력하세요: ");
+    scanf("%f", &u.floatVal);
+    printf("int 값: %d, 주소: %p\n", u.intVal, (void *)&u.intVal);
+    printf("float 값: %f, 주소: %p\n", u.floatVal, (void *)&u.floatVal);
+    printf("문자열을 입력하세요: ");
+    scanf("%s", u.charVal);
+    printf("int 값: %d, 주소: %p\n", u.intVal, (void *)&u.intVal);
+    printf("float 값: %f, 주소: %p\n", u.floatVal, (void *)&u.floatVal);
+    printf("char 값: %s, 주소: %p\n", u.charVal, (void *)u.charVal);
 }
