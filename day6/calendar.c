@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#define TRUE 1
 
 enum month {jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec};
 enum day {sun, mon, tue, wed, thu, fri, sat};
@@ -32,7 +33,7 @@ int getMonthEndDate(int year, int month) {
 
 void inputDate() {
 
-    while(1) {
+    while(TRUE) {
         printf("year을 입력하시오.\n");
 
         if (scanf("%d", &year) == 1 && (year >= 2025 && year <= 2099)) {
@@ -43,7 +44,7 @@ void inputDate() {
         }
     }
     
-    while(1) {
+    while(TRUE) {
         printf("month를 입력하시오.\n");
 
         if (scanf("%d", &realMonth) == 1 && (realMonth >= 1 && realMonth <= 12)) {
@@ -58,7 +59,7 @@ void inputDate() {
     int monthInput; 
     int yearInput;
     
-    while (1) {
+    while (TRUE) {
         printf("원하는 날짜를 입력하시오. (예: 20251215)\n");
         if (scanf("%d", &futureDate) == 1) {
             yearInput = futureDate / 10000; //연도 필터링
